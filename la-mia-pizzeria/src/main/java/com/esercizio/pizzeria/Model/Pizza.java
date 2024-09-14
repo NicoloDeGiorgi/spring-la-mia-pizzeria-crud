@@ -15,31 +15,36 @@ import jakarta.persistence.Table;
 public class Pizza {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 	
-	@Column
+	@Column(length = 100)
 	private String name;
 	
-	@Column
+	@Column(length = 1000)
 	private String description;
 	
-	@Column
+	@Column(name= "image_url", nullable = true)
 	private String img_url;
 	
 	private double price;
 	
+	
+	private Boolean availabe;
+	
+	@Column(name ="created_at")
 	private LocalDateTime createdAt;
 	
+	@Column(name ="update_at")
 	private LocalDateTime updatedAt;
 	
 	
 	//GETTER E SETTER
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	
@@ -95,6 +100,14 @@ public class Pizza {
 
 	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
+	}
+
+	public Boolean getAvailabe() {
+		return availabe;
+	}
+
+	public void setAvailabe(Boolean availabe) {
+		this.availabe = availabe;
 	}
 
 }

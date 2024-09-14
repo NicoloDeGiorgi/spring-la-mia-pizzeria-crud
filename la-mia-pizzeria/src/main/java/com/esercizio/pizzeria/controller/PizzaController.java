@@ -13,16 +13,16 @@ import com.esercizio.pizzeria.repository.PizzaRepository;
 @Controller
 @RequestMapping("/pizzas")
 public class PizzaController {
-	
-    @Autowired
+
+	@Autowired
 	private PizzaRepository repository;
-	
+
 	@GetMapping
-	public String index (Model model) {
-		
+	public String index(Model model) {
+
 		List<Pizza> pizzaList = repository.findAll();
 		model.addAttribute("pizzas", pizzaList);
-		
-		return "";
+
+		return "pizzas/index";
 	}
 }
