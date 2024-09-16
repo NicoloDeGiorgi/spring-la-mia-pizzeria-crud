@@ -29,12 +29,12 @@ public class Pizza {
 	private double price;
 	
 	
-	private Boolean availabe;
+	private Boolean available;
 	
 	@Column(name ="created_at")
 	private LocalDateTime createdAt;
 	
-	@Column(name ="update_at")
+	@Column(name ="updated_at")
 	private LocalDateTime updatedAt;
 	
 	
@@ -102,12 +102,11 @@ public class Pizza {
 		this.createdAt = createdAt;
 	}
 
-	public Boolean getAvailabe() {
-		return availabe;
+	public Boolean getAvailable() {
+		return available;
 	}
 
-	public void setAvailabe(Boolean availabe) {
-		this.availabe = availabe;
+	public void setAvailabe(Boolean availabe, Boolean available) {
+		this.available = available;
 	}
-
 }

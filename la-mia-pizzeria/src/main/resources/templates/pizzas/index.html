@@ -41,9 +41,15 @@
 						<td th:text="${pizza.updatedAt}"></td>
 						<td class>
 			
-							<a th:href="@{/pizzas/{id}(id=${pizza.id})}" class="btn btn-sm btn-primary">Show</a>
-							<a class="btn btn-sm btn-success">Edit</a>
-							<a class="btn btn-sm btn-warning">Delete</a>
+							<a th:href="@{/pizzas/{id}(id=${pizza.id})}" class="btn btn-sm btn-primary">
+								Show
+							</a>
+							<a class="btn btn-sm btn-success">
+								Edit
+							</a>
+							<a class="btn btn-sm btn-warning">
+								Delete
+							</a>
 						</td>
 					</tr>
 				</tbody>
